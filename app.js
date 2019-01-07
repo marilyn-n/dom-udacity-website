@@ -61,8 +61,39 @@ const elementToBeRemoved = parentContainer.lastElementChild // select the child 
 
 const remove = parentContainer.removeChild(elementToBeRemoved) // remove child from its parent
 
-const mainHeading = document.querySelector('h1');
+const mainHeading2 = document.querySelector('h1');
 
-mainHeading.parentElement.removeChild(mainHeading); // an element uses itself to remove itself from its parent.
+mainHeading2.parentElement.removeChild(mainHeading); // an element uses itself to remove itself from its parent.
 
-mainHeading.remove(); // .remove does the same as line 68 more easy
+mainHeading2.remove(); // .remove does the same as line 68 more easy
+
+// ----------------------------------->> STYLING <<----------------------------------------------
+
+// $0.style.backgroundColor = 'red';
+// cssText for multiple styles
+
+const comunityHeading = document.querySelector('h6.text-center');
+
+comunityHeading.style.color = 'purple';
+comunityHeading.style.fontSize = '2em';
+// ----------------------------------->> CLASLIST <<----------------------------------------------
+
+const myElement = document.querySelector('h2');
+
+ myElement.classList.contains('this-class');
+//  expected output: false
+
+myElement.classList.add('this-class');
+// expected output: <h2 class="this-class"></h2>
+
+myElement.classList.remove('this-class');
+// expected output: <h2></h2>
+
+myElement.classList.toggle('other-class');
+// expected output: <h2 class="other-class"></h2>
+
+myElement.classList.toggle('other-class');
+// expected output: <h2></h2>
+
+
+
