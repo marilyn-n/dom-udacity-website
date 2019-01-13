@@ -95,5 +95,16 @@ myElement.classList.toggle('other-class');
 myElement.classList.toggle('other-class');
 // expected output: <h2></h2>
 
+// ------------------------------------>> EVENT LISTENER <<----------------------------------------
 
+document.addEventListener('click', function() {
+    console.log('hey the page has been clicked!');
+    
+})
+
+document.addEventListener('keypress', function(){
+    console.log('removed!');
+    document.querySelector('#contain-all').firstElementChild.remove();
+    
+})
 
