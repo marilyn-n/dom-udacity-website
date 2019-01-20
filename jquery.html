@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
   <script
   src="https://code.jquery.com/jquery-3.3.1.slim.js"
   integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
@@ -12,16 +13,25 @@
 </head>
 <body>
 
-  <button onclick="loremDisplay()">Lorem Action</button>
+  <button onclick="loremDisplay()">Show lorem</button>
   
   <div style="width: 300px">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, enim perspiciatis vel dicta ab pariatur sed optio quibusdam ullam nostrum quis molestias id consectetur sint ex, qui libero aliquid fuga.</p>
   </div>
 
+  <li class="">click to toggle</li>
   <script>
-  $('div').click(function () {
-    $(this).css("background-color", "red");
-  })
+
+  const loremDisplay = () => {
+    console.log('im a function')
+    $('div').addClass('radius');
+    $('p').addClass('align').css('display', 'block');
+  }
+
+  $( "li" ).click(function() {
+  $( this ).toggleClass( "highlight" );
+  });
+
   </script>
 </body>
 </html>

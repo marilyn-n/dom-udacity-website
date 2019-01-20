@@ -1,0 +1,18 @@
+.radius {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  background-color: aqua;
+}
+
+.align {
+  padding: 65px;
+}
+
+p {
+  display: none;
+}
+
+.highlight {
+  background: yellow;
+}
