@@ -16,3 +16,11 @@ p {
 .highlight {
   background: yellow;
 }
+
+.show-text{
+  display: block;
+}
+
+.bg-color {
+  background-color: red;
+}

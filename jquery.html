@@ -13,24 +13,65 @@
 </head>
 <body>
 
-  <button onclick="loremDisplay()">Show lorem</button>
+  <button>Show lorem</button>
+  <button id="bg-btn">toggle document background color</button>
   
   <div style="width: 300px">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, enim perspiciatis vel dicta ab pariatur sed optio quibusdam ullam nostrum quis molestias id consectetur sint ex, qui libero aliquid fuga.</p>
   </div>
 
-  <li class="">click to toggle</li>
+  <input type="text" placeholder="write something">
+
+  <li class="">
+    click to toggle
+  </li>
   <script>
 
   const loremDisplay = () => {
     console.log('im a function')
-    $('div').addClass('radius');
-    $('p').addClass('align').css('display', 'block');
+    $('div').toggleClass('radius');
+    $('p').toggleClass('align show-text');
   }
 
+  $('button:first-child').click(loremDisplay);
+
   $( "li" ).click(function() {
-  $( this ).toggleClass( "highlight" );
+    console.log('this is:',this);
+    console.log('$(this) is:', $(this));
+    const that = document.querySelectorAll('LI');
+    console.log(that, 'here is that');
+    
+    $(this).toggleClass( "highlight" );
+    $(this).addClass( "highlight" );
   });
+
+  const toggleColor = () => {  
+    $('body').toggleClass('bg-color');    
+  }
+
+  $('#bg-btn').click(toggleColor);
+
+const sayHello = () => {
+  // alert`hello`
+}  
+
+ $(sayHello) 
+
+$(document).ready(sayHello)
+
+$('input').keydown(function (event) {
+  console.log(event.key);
+  console.log(event.keyCode);
+  
+  const b = $("<b></b>").text(event.key)
+  $('div').append(b)
+  
+  
+});
+
+const txt2 = $("<b></b>").text("Text:   ")
+
+$('div').append(txt2)
 
   </script>
 </body>
