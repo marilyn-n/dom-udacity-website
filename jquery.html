@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="style.css">
 
-<!-- Latest compiled and minified CSS -->
-  <title>Document</title>
+  <title>JQ events</title>
 </head>
 <body>
 
@@ -23,16 +21,14 @@
 
   <input type="text" placeholder="write something">
 
-  <li class="">
-    click to toggle
-  </li>
+  <li class="">click to toggle</li>
 
-  <button type="button" class="btn btn-primary" data-target="#exampleModal">
+  <button type="button" class="btn btn-primary open-modal" data-target="#exampleModal" data-toggle="modal" data-target="#exampleModal">
       Launch demo modal
-    </button>
+  </button>
     
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal">
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -45,61 +41,15 @@
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="close-modal" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
   </div>
 
-  <script>
-
-  const loremDisplay = () => {
-    console.log('im a function')
-    $('div').toggleClass('radius');
-    $('p').toggleClass('align show-text');
-  }
-
-  $('button:first-child').click(loremDisplay);
-
-  $( "li" ).click(function() {
-    console.log('this is:',this);
-    console.log('$(this) is:', $(this));
-    const that = document.querySelectorAll('LI');
-    console.log(that, 'here is that');
-    
-    $(this).toggleClass( "highlight" );
-  });
-
-  const toggleColor = () => {  
-    $('body').toggleClass('bg-color');    
-  }
-
-  $('#bg-btn').click(toggleColor);
-
-
-// $('input').keydown(function(event) {
-//   console.log(event.key);
-//   console.log(event.keyCode);
-  
-//   const b = $("<b></b>").text(event.key)
-//   $('div').append(b)
-  
-// });
-
-// const txt2 = $("<b></b>").text("Text:   ")
-
-// $('div').append(txt2)
-
-$( document ).ready(function() {
-    console.log( "ready!" );
-    $(".btn").click(function(){
-    $("#exampleModal").addClass('show');
-  });
-});
-
-  </script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="events.js"></script>
 
 </body>
 </html>
