@@ -30,5 +30,10 @@ p {
 }
 
 .modal {
-  top: 100px !important;
+  top: 150px !important;
+  
+}
+
+.modal-dialog {
+  margin-top: 130px !important;
 }
