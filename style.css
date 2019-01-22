@@ -24,3 +24,11 @@ p {
 .bg-color {
   background-color: red;
 }
+
+.fade {
+  opacity: unset !important;
+}
+
+.modal {
+  top: 100px !important;
+}
