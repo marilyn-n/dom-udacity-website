@@ -1,3 +1,3 @@
-# dom-udacity-website
+# Intro to DOM and jQuery
 
-A Javascript DOM Tutorial
+A Javascript DOM and jQuery Tutorial
