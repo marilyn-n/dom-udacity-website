@@ -1,21 +1,20 @@
-  const loremDisplay = () => {
-    $('p').toggleClass('align show-text radius');
-  }
+// const loremDisplay = () => {
+//   $('p').toggleClass('align show-text radius');
+// }
 
-  $('button:first-child').click(loremDisplay);
+// $('.show-lorem').click(loremDisplay);
 
-  $( "li" ).click(function() {
-    $(this).toggleClass( "highlight" );
-  });
+// $( "li" ).click(function() {
+//   $(this).toggleClass( "highlight" );
+// });
 
-  const toggleColor = () => {  
-    $('body').toggleClass('bg-color');    
-  }
+const toggleColor = () => {  
+  $('body').toggleClass('bg-color');    
+}
 
-  $('#bg-btn').click(toggleColor);
+$('#bg-btn').click(toggleColor);
 
-
-// $('input').keydown(function(event) {
+// $('input:first-child').keydown(function(event) {
 //   console.log(event.key);
 //   console.log(event.keyCode);
   
@@ -28,13 +27,13 @@
 
 // $('div').append(txt2)
 
-// show modal
-$( document ).ready(function() {
-    console.log( "ready!" );
-    $(".open-modal").click(function(){
-    $("#exampleModal").addClass('show');
-    $('.close-modal').click(function () {
-      $("#exampleModal").removeClass('show');
-    })
-  });
-});
+// // show modal
+// $( document ).ready(function() {
+//     console.log( "ready!" );
+//     $(".open-modal").click(function(){ // close modal by toggling class
+//     $("#exampleModal").toggleClass('show');
+//     $('.close-modal').click(function () { // close modal by clicking on cancel
+//       $("#exampleModal").removeClass('show');
+//     })
+//   });
+// });
