@@ -23,17 +23,17 @@ $('#bg-btn').click(toggleColor);
   
 // });
 
-// const txt2 = $("<b></b>").text("Text:   ")
+// const txt2 = $("<b></b>").text("Text: ")
 
 // $('div').append(txt2)
 
-// // show modal
-// $( document ).ready(function() {
-//     console.log( "ready!" );
-//     $(".open-modal").click(function(){ // close modal by toggling class
-//     $("#exampleModal").toggleClass('show');
-//     $('.close-modal').click(function () { // close modal by clicking on cancel
-//       $("#exampleModal").removeClass('show');
-//     })
-//   });
-// });
+// show modal
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $(".open-modal").click(function(){ // close modal by toggling class
+    $("#exampleModal").toggleClass('show');
+    $('.close-modal').click(function () { // close modal by clicking on cancel
+      $("#exampleModal").removeClass('show');
+    })
+  });
+});
