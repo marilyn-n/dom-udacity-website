@@ -1,3 +1,7 @@
+html {
+  padding: 2rem 2rem;
+}
+
 .radius {
   border-radius: 50%;
   height: 300px;
@@ -36,4 +40,8 @@ p {
 
 .modal-dialog {
   margin-top: 130px !important;
+}
+
+.modal-backdrop {
+  background-color: #0006 !important;
 }
