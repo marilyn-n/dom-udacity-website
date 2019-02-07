@@ -14,6 +14,14 @@ selectAll.addEventListener('click', function () {
   [...checkboxes].map(check => check.checked = true);
 
 })
+
+const unselect = document.querySelector('.unselect');
+
+unselect.addEventListener('click', function () {
+  const checkboxes = document.querySelectorAll('input[type=checkbox]');
+
+  [...checkboxes].map(check => check.checked = false);
+})
   
 
 });
