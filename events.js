@@ -1,3 +1,29 @@
+const hotDrinks = ['coffe', 'latte', 'tea', 'chocolate'];
+const hotLevel = ['very hot', 'hot', 'hot', 'medium'];
+
+// $.each(hotLevel, function (i, v) {
+//   $('.hot-level').append('<li class="list-group-item">' + i + ' ' + v + '</li>');
+// })
+
+// $.each(hotDrinks, function( index, value ) {
+//   $('.drinks').append('<li class="list-group-item">' + index + ' ' + value + '</li>');
+// });
+
+
+
+
+$.each(hotDrinks, function( index, value ) {
+
+  $('.drinks').append('<li class="list-group-item modal-list">' + index + ' ' + value + '</li>');
+
+
+  $.each(hotLevel, function (v, i) {
+
+    $('.modal-list').append(' ' + '<b>' + v + ' ' + i + '</b>');
+    
+  })
+});
+
 $( document ).ready(function() {
 
 const toggleColor = () => {  
