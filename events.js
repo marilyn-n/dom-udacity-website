@@ -14,12 +14,10 @@ const hotLevel = ['very hot', 'hot', 'hot', 'medium'];
 
 $.each(hotDrinks, function( index, value ) {
 
-  $('.drinks').append('<li class="list-group-item modal-list">' + index + ' ' + value + '</li>');
-
-
   $.each(hotLevel, function (v, i) {
+    $('.drinks').append('<li class="list-group-item modal-list">' + value + ' ' + i + '</li>');
 
-    $('.modal-list').append(' ' + '<b>' + v + ' ' + i + '</b>');
+    // $('.modal-list').append(' ' + '<b>' + v + ' ' + i + '</b>');
     
   })
 });
