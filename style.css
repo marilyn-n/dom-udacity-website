@@ -13,14 +13,6 @@ html {
   padding: 65px;
 }
 
-p {
-  display: none;
-}
-
-.highlight {
-  background: yellow;
-}
-
 .show-text{
   display: block;
 }
@@ -44,4 +36,8 @@ p {
 
 .modal-backdrop {
   background-color: #0006 !important;
+}
+
+.d-block {
+  display: block !important;
 }

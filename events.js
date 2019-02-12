@@ -1,17 +1,6 @@
 const hotDrinks = ['coffe', 'latte', 'tea', 'chocolate'];
 const hotLevel = ['very hot', 'hot', 'hot', 'medium'];
 
-// $.each(hotLevel, function (i, v) {
-//   $('.hot-level').append('<li class="list-group-item">' + i + ' ' + v + '</li>');
-// })
-
-// $.each(hotDrinks, function( index, value ) {
-//   $('.drinks').append('<li class="list-group-item">' + index + ' ' + value + '</li>');
-// });
-
-
-
-
 $.each(hotDrinks, function( index, value ) {
 
   $.each(hotLevel, function (v, i) {
@@ -50,13 +39,9 @@ unselect.addEventListener('click', function () {
 
 });
 
-
-// const loremDisplay = () => {
-//   $('p').toggleClass('align show-text radius');
-// }
-
-// $('.show-lorem').click(loremDisplay);
-
-// $( "li" ).click(function() {
-//   $(this).toggleClass( "highlight" );
-// });
+const copyToClipboard = () => {
+  const textField = $('#clipboard-field');
+  textField.select();
+  document.execCommand("copy");
+  alert('copied ' + textField.val());
+}
