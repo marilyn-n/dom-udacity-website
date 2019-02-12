@@ -43,5 +43,6 @@ const copyToClipboard = () => {
   const textField = $('#clipboard-field');
   textField.select();
   document.execCommand("copy");
-  alert('copied ' + textField.val());
+  $('.alert-info').text('copied! ' + textField.val());
+  $('.alert-info').css("display","block");
 }
