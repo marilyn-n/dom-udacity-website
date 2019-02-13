@@ -45,4 +45,17 @@ const copyToClipboard = () => {
   document.execCommand("copy");
   $('.alert-info').text('copied! ' + textField.val());
   $('.alert-info').css("display","block");
+
 }
+
+const fileExtension = () => {
+  const str = document.getElementsByClassName('file');
+  [...str].map(file => {
+    const text = file.textContent;
+    const subs = text.substr(text.length -3);
+    console.log(subs);
+  })
+  
+}
+
+
