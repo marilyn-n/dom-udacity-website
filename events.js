@@ -48,13 +48,60 @@ const copyToClipboard = () => {
 
 }
 
-const fileExtension = () => {
-  const str = document.getElementsByClassName('file');
-  [...str].map(file => {
-    const text = file.textContent;
-    const subs = text.substr(text.length -3);
-    console.log(subs);
+const addFileImage = () => {
+  const fileElements = document.getElementsByClassName('file');
+
+  [...fileElements].map(fileElement => {
+    const filename = fileElement.textContent;
+    const extension = filename.substr(filename.length -3);
+
+    console.log(extension);
+    console.log(filename);
+    
+    if(extension === 'png') {
+      fileElement.innerHTML = `<i class="fas fa-image"></i> ${fileElement.innerHTML}` 
+        
+    } else if (extension === 'xml') {
+      fileElement.innerHTML = `<i class="fas fa-file-xml"></i> ${fileElement.innerHTML}`
+    }
+
+     else if (extension === 'pdf') {
+      fileElement.innerHTML = `<i class="fas fa-file-pdf"></i> ${fileElement.innerHTML}`
+    }
+
+     else if (extension === 'jpg') {
+      fileElement.innerHTML = `<i class="fas fa-file-upload"></i> ${fileElement.innerHTML}`
+    }
+
+    else if (extension === 'xml') {
+      fileElement.innerHTML = `<i class="fas fa-file-alt"></i> ${fileElement.innerHTML}`
+    }
+
+    else if (extension === 'mp4') {
+      fileElement.innerHTML = `<i class="fas fa-file-video"></i> ${fileElement.innerHTML}`
+    }
+
+    else if (extension === 'mov') {
+      fileElement.innerHTML = `<i class="fas fa-file-audio"></i> ${fileElement.innerHTML}`
+    }
+
+    else if (extension === 'txt') {
+      fileElement.innerHTML = `<i class="fas fa-file-word"></i> ${fileElement.innerHTML}`
+    }
+
+    else if (extension === 'css') {
+      fileElement.innerHTML = `<i class="fas fa-file-code"></i> ${fileElement.innerHTML}`
+    }
+
+    else if (extension === 'zip') {
+      fileElement.innerHTML = `<i class="fas fa-file-archive"></i> ${fileElement.innerHTML}`
+    }
+
+    
   })
+  
+
+
   
 }
 
