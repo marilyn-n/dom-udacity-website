@@ -4,10 +4,7 @@ const hotLevel = ['very hot', 'hot', 'hot', 'medium'];
 $.each(hotDrinks, function( index, value ) {
 
   $.each(hotLevel, function (v, i) {
-    $('.drinks').append('<li class="list-group-item modal-list">' + value + ' ' + i + '</li>');
-
-    // $('.modal-list').append(' ' + '<b>' + v + ' ' + i + '</b>');
-    
+    $('.drinks').append('<li class="list-group-item modal-list">' + value + ' ' + i + '</li>');    
   })
 });
 
@@ -35,7 +32,6 @@ unselect.addEventListener('click', function () {
 
   [...checkboxes].map(check => check.checked = false);
 })
-  
 
 });
 
